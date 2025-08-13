@@ -23,7 +23,7 @@ const EmailVerifyForm = () => {
         }
         else {
             setSubmit(true);
-            let res=await (await fetch(`/api/user/recover/verifyEmail?email=${data.email}`)).json();
+            let res=await (await fetch(`${process.env.BASE_URL}/api/user/recover/verifyEmail?email=${data.email}`)).json();
             setSubmit(false);
 
             if(res['status']==="success"){

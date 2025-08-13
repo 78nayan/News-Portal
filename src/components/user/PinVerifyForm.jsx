@@ -23,7 +23,7 @@ const PinVerifyForm = () => {
         else {
             setSubmit(true);
             const options={method:'POST', body:JSON.stringify(data)}
-            let res=await (await fetch(`/api/user/recover/verifyOTP`,options)).json();
+            let res=await (await fetch(`${process.env.BASE_URL}/api/user/recover/verifyOTP`,options)).json();
             setSubmit(false);
 
             if(res['status']==="success"){

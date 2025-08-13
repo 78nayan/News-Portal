@@ -40,7 +40,7 @@ const SignUpForm = () => {
             setSubmit(true);
             const options={method:'POST', body:JSON.stringify(data)}
 
-            let res=await (await fetch("/api/user/registration",options)).json();
+            let res=await (await fetch(`${process.env.BASE_URL}/api/user/registration`,options)).json();
             setSubmit(false);
 
             if(res['status']==="success"){

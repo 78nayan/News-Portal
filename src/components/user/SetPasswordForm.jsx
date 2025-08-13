@@ -23,7 +23,7 @@ const SetPasswordForm = () => {
         else {
             setSubmit(true);
             const options={method:'POST', body:JSON.stringify(data)}
-            let res=await (await fetch(`/api/user/recover/resetPassword`,options)).json();
+            let res=await (await fetch(`${process.env.BASE_URL}/api/user/recover/resetPassword`,options)).json();
             setSubmit(false);
 
             if(res['status']==="success"){
