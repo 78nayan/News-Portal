@@ -8,9 +8,9 @@ const PopularList = (props) => {
             <div className="bg-dark mt-2 rounded-1 text-white p-2">
                 <span className="p-1">POPULAR</span>
             </div>
-            
+
             {
-                props.popular.map((item,i)=>{
+                props.popular.map((item, i) => {
                     return <div className="col-12 py-1 px-0">
                         <Link href={`/details?id=${item['id']}`} className=" card bg-white shadow-sm">
                             <div className="row">
