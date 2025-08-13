@@ -28,7 +28,7 @@ const LoginForm = () => {
 
             setSubmit(true);
             const options={method:'POST', body:JSON.stringify(data)}
-            let res=await (await fetch(`${process.env.BASE_URL}/api/user/login`,options)).json();
+            let res=await (await fetch(`/api/user/login`,options)).json();
             setSubmit(false);
             setData({email:"",password: ""})
 

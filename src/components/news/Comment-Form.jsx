@@ -25,7 +25,7 @@ const CommentForm = (props) => {
         else {
             setSubmit(true);
             const options={method:'POST', body:JSON.stringify(data)}
-            let res=await (await fetch(`${process.env.BASE_URL}/api/comments/manage`,options)).json();
+            let res=await (await fetch(`/api/comments/manage`,options)).json();
             setSubmit(false);
 
             if(res['status']==="success"){
